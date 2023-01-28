@@ -65,7 +65,7 @@
 - `rm -rf `  					-Removes files (empty / non empty) & directories
 - `rm -rp `   					-Removes non empty diretories including parent & sub directories
 - `rm -r `  						-Removes Empty Directories
-
+----
 - `whoami ` 						-Username of the users logged in at the terminal.
 - `hostname ` 					-Display hostname of the system /ec2 instance/machine details.
 - `hostname -f ` 				-Displays Fully Qualified Domain Name (FQDN) of the system.
@@ -107,7 +107,7 @@
 								grep root  /etc/password
 
 - `sort ` 						-used to sort files in alphabatical order
-
+---
 
 - `useradd rocky ` 				- Create a user named "rocky"
 - `groupadd devops ` 			- Create a group named "devops"
