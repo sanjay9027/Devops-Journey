@@ -56,75 +56,75 @@
 
 
 
-mkdir -p dir-name/dir-name 	-Create a directory hierarchy. Create parent directories as needed, if they don't
+- `mkdir -p dir-name/dir-name ` 	-Create a directory hierarchy. Create parent directories as needed, if they don't
 								exist. You can specify multiple directories.
 
-rmdir      					-to remove the specified directory  if it's empty
-rmdir -p 					-Remove both the Parent & Child Directory
-rmdir -pv   				-Remove all parent & sub directories along with the verbox
-rm -rf  					-Removes files (empty / non empty) & directories
-rm -rp   					-Removes non empty diretories including parent & sub directories
-rm -r  						-Removes Empty Directories
+- `rmdir `      					-to remove the specified directory  if it's empty
+- `rmdir -p ` 					-Remove both the Parent & Child Directory
+- `rmdir -pv `   				-Remove all parent & sub directories along with the verbox
+- `rm -rf `  					-Removes files (empty / non empty) & directories
+- `rm -rp `   					-Removes non empty diretories including parent & sub directories
+- `rm -r `  						-Removes Empty Directories
 
-whoami 						-Username of the users logged in at the terminal.
-hostname 					-Display hostname of the system /ec2 instance/machine details.
-hostname -f 				-Displays Fully Qualified Domain Name (FQDN) of the system.
-hostname i					-to seee only ip address
-passwd 						-Change password of current user.
-pwd 						-Get the full path of the current working directory.
-ipconfig					-used on windows to get ip address & all other ip ddress of i/o devices of machine
-ifconfig					-used on linux to get ip address  & all other ip ddress of i/o devices of machine
+- `whoami ` 						-Username of the users logged in at the terminal.
+- `hostname ` 					-Display hostname of the system /ec2 instance/machine details.
+- `hostname -f ` 				-Displays Fully Qualified Domain Name (FQDN) of the system.
+- `hostname i `					-to seee only ip address
+- `passwd ` 						-Change password of current user.
+- `pwd ` 						-Get the full path of the current working directory.
+- `ipconfig `					-used on windows to get ip address & all other ip ddress of i/o devices of - `machine `
+- `ifconfig `					-used on linux to get ip address  & all other ip ddress of i/o devices of - `machine
 
-cat /etc/os-release 		-to see details of OS 
-yum 						-yellodog update modified //used to install or uninstall any pakage / software
+- `cat /etc/os-release ` 		-to see details of OS 
+- `yum ` 						-yellodog update modified //used to install or uninstall any pakage / software
 
-httpd						-hyper text transfer protocol daemon
-yum install httpd			-install apache server by default on RedHat Linux or AWS Linux
+- `httpd `						-hyper text transfer protocol daemon
+- `yum install httpd `			-install apache server by default on RedHat Linux or AWS Linux
 
--y  						-used to mark all options to yes 
-yum remove httpd  			-remove httpd files
-yum update httpd  			-to update httpd files
+- `-y `  						-used to mark all options to yes 
+- `yum remove httpd `  			-remove httpd files
+- `yum update httpd `  			-to update httpd files
 
-service httpd start  		-to start apache server
-service httpd status		-to check apache server status
+- `service httpd start `  		-to start apache server
+- `service httpd status `		-to check apache server status
 
-chkconfig httpd on  		-to run apache server automatically when we open our machines
-chkconfig httpd off  		-don't start apache server automatically
+- `chkconfig httpd on `  		-to run apache server automatically when we open our machines
+- `chkconfig httpd off `  		-don't start apache server automatically
 
-yum list installed 			-to get details of all installed packages
+- `yum list installed ` 			-to get details of all installed packages
 
-which 						-to check any package is installed or not
-which tree 					-check tree installed ?
+- `which ` 						-to check any package is installed or not
+- `which tree ` 					-check tree installed ?
 
-echo 						-reflect message
+- `echo ` 						-reflect message
 								echo "hello " 
 
-echo "hello" > file9 		-creat new file9 & add text "hello"
+- `echo "hello" > file9 ` 		-creat new file9 & add text "hello"
 
-echo "namaste" >> file9 	-add text "namaste" in file9
+- `echo "namaste" >> file9 ` 	-add text "namaste" in file9
 
-grep 						-to find out a text present acts like Ctrl + F
+- `grep ` 						-to find out a text present acts like Ctrl + F
 								grep root  /etc/password
 
-sort 						-used to sort files in alphabatical order
+- `sort ` 						-used to sort files in alphabatical order
 
 
-useradd rocky 				- Create a user named "rocky"
-groupadd devops 			- Create a group named "devops"
+- `useradd rocky ` 				- Create a user named "rocky"
+- `groupadd devops ` 			- Create a group named "devops"
 
-gpasswd -a rocky devops 	-Add user "rocky" to group "devops"
-gpasswd -M <user1> <user2> <groupname>  -Add multiple users to a group
+- `gpasswd -a rocky devops ` 	-Add user "rocky" to group "devops"
+- `gpasswd -M <user1> <user2> <groupname> `  -Add multiple users to a group
 
-cat /etc/group 				-To see the users & groupname
+- `cat /etc/group ` 				-To see the users & groupname
 
-ln -s <fileName> <SoftlinkFileName> -To create a softlink file of a file
+- `ln -s <fileName> <SoftlinkFileName> ` -To create a softlink file of a file
 										ln -s file1 softlink1 -> lrwxrwxrwx 1 root root 5 Dec 26 11:35 softlink1 -> file1
 										
 										
-ln <fileName> <HardlinkFileName>  - To create a hardlink file of a file
+- `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file
 										ln file2 hardlink2		
-note- if u delete the original file also the backup file / hardlink file will have all data
+- `note- if u delete the original file also the backup file / hardlink file will have all data `
 
-tar comand
-gzip command
-wget command
+- `tar comand `
+- `gzip command `
+- `wget command `
