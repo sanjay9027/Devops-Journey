@@ -1,4 +1,4 @@
-###Linux Commands
+### Linux Commands
 
 
 - `cd`	→ Navigate to the last directory you were working in.
