@@ -4,9 +4,10 @@
 - `cd`	→ Navigate to the last directory you were working in.
 - `cd ..`→ Go to the parent directory of current directory (mind the space between cd and ..)
 
-- `sudo su `- `ls `- `ls -a `					-this will shhow hidden files + non hidden files
+- `ls -a `					-this will shhow hidden files + non hidden files
 - `ls -l `       				-long list 
-- `ls -al `- `cat file1 `
+- `ls -al `
+- `cat file1 `
 - `cat > file2 `	write your text & to save press ctrl+D 
 
 - `cat >> file1 ` 				-to add text in file (this will not delete any existing text , it will just - `add new text)
@@ -15,7 +16,8 @@
 
 - `stat <fileName> ` 			-to see the file modification history
 
-- `touch file3 `- `touch -a file3 `
+- `touch file3 `
+- `touch -a file3 `
 - `vi file5 `	root@ip-172-31-45-135:/home/ubuntu# vi file5
 	//editor screen will display
 	press i -> to see insert option & can able to insert text
