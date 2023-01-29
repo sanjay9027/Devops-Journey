@@ -18,18 +18,20 @@
 
 - `touch file3 `
 - `touch -a file3 `
-- `vi file5 `	root@ip-172-31-45-135:/home/ubuntu# vi file5
-	//editor screen will display
-	press i -> to see insert option & can able to insert text
-	swastik  //add required texts
-	press  ->to go out from insert option (insert text will not be display)
-	type :wq -> press enter // w-save, q-quit go out from editor screen
+- `vi file5 `
+	- root@ip-172-31-45-135:/home/ubuntu# vi file5
+	- editor screen will display
+	- press i -> to see insert option & can able to insert text
+	- swastik  //add required texts
+	- press  ->to go out from insert option (insert text will not be display)
+	- type :wq -> press enter // w-save, q-quit go out from editor screen
 
-- `nano file5 `	root@ip-172-31-45-135:/home/ubuntu# nano file5
-	//new editor will open
-	swastik   // enter desired texts
-	Ctrl+X //to exit from editor 
-	//Press Y to confirm
+- `nano file5 `	
+	- root@ip-172-31-45-135:/home/ubuntu# nano file5
+	- new editor will open
+	- swastik  ( enter desired texts )
+	- Ctrl+X ( to exit from editor )
+	- Press Y ( to confirm )
 
 
 - `mkdir `					-used to create a directory
