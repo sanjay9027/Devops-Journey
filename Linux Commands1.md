@@ -123,13 +123,14 @@
 
 - `cat /etc/group ` -To see the users & groupname
 
-- `ln -s <fileName> <SoftlinkFileName> `  -To create a softlink file of a file
+- `ln -s <fileName> <SoftlinkFileName> `  -To create a softlink file of a file (Shortcut)
 	- Eg. `ln -s file1 filex` O/P-  lrwxrwxrwx   1 root root     5 Jan 30 11:36 filex -> file1
 										
 										
-- `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file
-										ln file2 hardlink2		
-- `note- if u delete the original file also the backup file / hardlink file will have all data `
+- `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file (BackUp File)
+        - Eg. `ln file2 filez` O/P- -rw-r--r--   2 root root     0 Jan 30 11:36 filez
+		
+- `Note- If the original file deleted then the backup file / hardlink file will have all data`
 
 - `tar comand `
 - `gzip command `
