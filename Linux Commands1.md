@@ -119,12 +119,12 @@
 
 - `gpasswd -a rocky devops ` 	-Add user "rocky" to group "devops"  -a means add
 - `gpasswd -d rocky devops ` 	-Delete user "rocky" from group "devops"  -d means delete
-- `gpasswd -M <user1> <user2> <groupname> `  -Add multiple users to a group -M means members USERS
+- `gpasswd -M [<user1>,<user2>] <groupname> ` Eg. `gpasswd -M sanjay,ram devops`  -Add multiple users to a group
 
-- `cat /etc/group ` 				-To see the users & groupname
+- `cat /etc/group ` -To see the users & groupname
 
 - `ln -s <fileName> <SoftlinkFileName> ` -To create a softlink file of a file
-										ln -s file1 softlink1 -> lrwxrwxrwx 1 root root 5 Dec 26 11:35 softlink1 -> file1
+					ln -s file1 softlink1 -> lrwxrwxrwx 1 root root 5 Dec 26 11:35 softlink1 -> file1
 										
 										
 - `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file
