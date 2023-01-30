@@ -114,6 +114,7 @@
 ---
 
 - `useradd rocky ` 				- Create a user named "rocky"
+- `note- to add multiple users , we need to loop above command using Bash. `
 - `groupadd devops ` 			- Create a group named "devops"
 
 - `gpasswd -a rocky devops ` 	-Add user "rocky" to group "devops"  -a means add
