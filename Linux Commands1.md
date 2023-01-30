@@ -116,8 +116,9 @@
 - `useradd rocky ` 				- Create a user named "rocky"
 - `groupadd devops ` 			- Create a group named "devops"
 
-- `gpasswd -a rocky devops ` 	-Add user "rocky" to group "devops"
-- `gpasswd -M <user1> <user2> <groupname> `  -Add multiple users to a group
+- `gpasswd -a rocky devops ` 	-Add user "rocky" to group "devops"  -a means add
+- `gpasswd -d rocky devops ` 	-Delete user "rocky" from group "devops"  -d means delete
+- `gpasswd -M <user1> <user2> <groupname> `  -Add multiple users to a group -M means members USERS
 
 - `cat /etc/group ` 				-To see the users & groupname
 
