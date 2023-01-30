@@ -123,8 +123,8 @@
 
 - `cat /etc/group ` -To see the users & groupname
 
-- `ln -s <fileName> <SoftlinkFileName> ` -To create a softlink file of a file
-					ln -s file1 softlink1 -> lrwxrwxrwx 1 root root 5 Dec 26 11:35 softlink1 -> file1
+- `ln -s <fileName> <SoftlinkFileName> `  -To create a softlink file of a file
+	- Eg. `ln -s file1 filex` O/P-  lrwxrwxrwx   1 root root     5 Jan 30 11:36 filex -> file1
 										
 										
 - `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file
