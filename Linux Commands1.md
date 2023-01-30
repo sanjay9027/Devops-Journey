@@ -128,7 +128,7 @@
 										
 										
 - `ln <fileName> <HardlinkFileName> `  - To create a hardlink file of a file (BackUp File)
-        - Eg. `ln file2 filez` O/P- -rw-r--r--   2 root root     0 Jan 30 11:36 filez
+	- Eg. `ln file2 filez` O/P- -rw-r--r--   2 root root     0 Jan 30 11:36 filez
 		
 - `Note- If the original file deleted then the backup file / hardlink file will have all data`
 
