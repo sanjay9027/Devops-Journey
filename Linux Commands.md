@@ -392,6 +392,6 @@ matches with the pattern and, by default, returns their ID
 - `echo ` reflect message
 - `echo "hello" > file9 ` creat new file9 & add text "hello"
 - `echo "namaste" >> file9 `add text "namaste" in file9
-- `grep ` to find out a text present acts like Ctrl + F
-		- Eg. `grep root  /etc/password `
+- `grep ` to find out a text present acts like Ctrl + F  
+    - Eg. `grep root  /etc/password `
 - `sort ` used to sort files in alphabatical order
