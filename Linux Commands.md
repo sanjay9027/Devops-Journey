@@ -69,7 +69,7 @@
     
 - `find <name>` → find things in a file or a directory
     - lot of useful flags here
-    - check out `man find`
+    - check out `man find` 
 
 ---
 
