@@ -276,11 +276,49 @@
 ---
 ### Process Management
 
-- `ps `To display the currently working processes
-- `top` Display all running process
-- `kill pid` Kill the process with given pid
+- `ps ` To display the currently working processes
+- `top`  Display all running process
+- `kill pid`  Kill the process with given pid
 - `killall proc` Kill all the process named proc
 - `pkill pattern` Will kill all processes matching the pattern
-- `bg `List stopped or background jobs,resume a stopped job inthe background
-- `fg `Brings the most recent job to foreground
+- `bg ` List stopped or background jobs,resume a stopped job inthe background
+- `fg ` Brings the most recent job to foreground
 - `fg n` Brings job n to the foreground
+
+---
+### System Info
+
+- `whoami ` Username of the users logged in at the terminal.
+- `hostname ` Display hostname of the system /ec2 instance/machine details.
+- `hostname -f ` Displays Fully Qualified Domain Name (FQDN) of the system.
+- `hostname i `	to seee only ip address
+- `passwd ` Change password of current user.
+- `pwd ` Get the full path of the current working directory.
+- `ipconfig ` used on windows to get ip address & all other ip ddress of i/o devices of - machine 
+- `ifconfig ` used on linux to get ip address  & all other ip ddress of i/o devices of - machine
+- `cat /etc/os-release ` to see details of OS 
+- `date` Show the current date and time
+- `cal` Show this month's calender
+- `uptime` Show current uptime
+- `w` Display who is on line
+- `finger user` Display information about user
+- `uname -a`  Show kernel information
+- `cat /proc/cpuinfo`  Cpu information
+- `cat proc/meminfo`  Memory information
+- `man command` Show the manual for command
+- `df ` Show the disk usage
+- `du ` Show directory space usage
+- `free`  Show memory and swap usage
+- `whereis app`  Show possible locations of app
+- `which app ` Show which applications will be run by default
+
+---
+### Searching
+
+- `grep pattern file` Search for pattern in file
+- `grep -r pattern dir` Search recursively for pattern in dir
+- `command | grep pattern` Search pattern in the output of a command
+- `locate file` Find all instances of file
+- `find . -name filename` Searches in the current directory (represented by a period) and below it, for files and directories with names starting with filename
+- `pgrep pattern` Searches for all the named processes , that
+matches with the pattern and, by default, returns their ID
