@@ -322,3 +322,34 @@
 - `find . -name filename` Searches in the current directory (represented by a period) and below it, for files and directories with names starting with filename
 - `pgrep pattern` Searches for all the named processes , that
 matches with the pattern and, by default, returns their ID
+
+---
+### Compression
+- `tar cf file.tar ` file Create tar named file.tar containing file
+- `tar xf file.tar`  Extract the files from file.tar
+- `tar czf file.tar.gz files ` Create a tar with Gzip compression
+- `tar xzf file.tar.gz`  Extract a tar using Gzip
+- `tar cjf file.tar.bz2` Create tar with Bzip2 compression
+- `tar xjf file.tar.bz2`  Extract a tar using Bzip2
+- `gzip file` Compresses file and renames it to file.gz
+- `gzip -d file.gz`  Decompresses file.gz back to file
+
+---
+### Network
+- `ping host` Ping host and output results
+- `whois domain` Get whois information for domains
+- `dig domain` Get DNS information for domain
+- `dig -x host` Reverse lookup host
+- `wget file` Download file
+- `wget -c file` Continue a stopped download
+
+---
+### Shortcuts
+- `ctrl+c` Halts the current command
+- `trl+z` Stops the current command, resume with fg in the foreground or bg in the background
+- `ctrl+d` Logout the current session, similar to exit
+- `ctrl+w` Erases one word in the current line
+- `ctrl+u` Erases the whole line
+- `ctrl+r ` Type to bring up a recent command
+- `!! ` Repeats the last command
+- `exit`  Logout the current session
