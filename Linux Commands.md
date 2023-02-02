@@ -353,3 +353,45 @@ matches with the pattern and, by default, returns their ID
 - `ctrl+r ` Type to bring up a recent command
 - `!! ` Repeats the last command
 - `exit`  Logout the current session
+
+---
+### User Management
+- `useradd rocky ` 	Create a user named "rocky"
+- `note- to add multiple users , we need to loop above command using Bash. `
+- `groupadd devops ` Create a group named "devops"
+
+- `gpasswd -a rocky devops ` Add user "rocky" to group "devops"  -a means add
+- `gpasswd -d rocky devops ` Delete user "rocky" from group "devops"  -d means delete
+- `gpasswd -M [<user1>,<user2>] <groupname> ` Eg. `gpasswd -M sanjay,ram devops`  -Add multiple users to a group
+- `cat /etc/group ` To see the users & groupname
+
+- `ln -s <fileName> <SoftlinkFileName> `  To create a softlink file of a file (Shortcut)
+	- Eg. `ln -s file1 filex` O/P-  lrwxrwxrwx   1 root root     5 Jan 30 11:36 filex -> file1
+										
+										
+- `ln <fileName> <HardlinkFileName> `  To create a hardlink file of a file (BackUp File)
+	- Eg. `ln file2 filez` O/P- -rw-r--r--   2 root root     0 Jan 30 11:36 filez
+		
+- `Note- If the original file deleted then the backup file / hardlink file will have all data`
+
+---
+### Package Related
+
+- `httpd `				hyper text transfer protocol daemon
+- `yum install httpd `	install apache server by default on RedHat Linux or AWS Linux
+- `-y `  				used to mark all options to yes 
+- `yum remove httpd `  	remove httpd files
+- `yum update httpd `  	to update httpd files
+- `service httpd start `  to start apache server
+- `service httpd status `to check apache server status
+- `chkconfig httpd on `  to run apache server automatically when we open our machines
+- `chkconfig httpd off `  don't start apache server automatically
+- `yum list installed ` To get details of all installed packages
+- `which ` 	to check any package is installed or not
+- `which tree ` Check tree is installed ?
+- `echo ` reflect message
+- `echo "hello" > file9 ` creat new file9 & add text "hello"
+- `echo "namaste" >> file9 `add text "namaste" in file9
+- `grep ` to find out a text present acts like Ctrl + F
+		- Eg. `grep root  /etc/password `
+- `sort ` used to sort files in alphabatical order
