@@ -6,6 +6,7 @@
 - `cd ..` → to go back a folder
 - `pwd` → print working directory or current directory
 - `ls -a` → list all the hidden files as well
+- `ls -lt` → sorting the formatted listing by time modification
 - `ls -l` → showing the file permissions as well
     - `rwxd` ⇒ read, write, execute, delete
 - `ls -al` → combining the above two commands
@@ -37,16 +38,18 @@
 - `mkdir <name or path>` → make a new directory
 - `mkdir -p dir1/middle/dir2` → creating a directory in the middle of `dir1` & `dir2`
 - `touch <filename or path>` → create a new file
-- `cp <filename> <new filename>` → to make a copy of a file
+
 - `mv <filename> <location>` → to move a file to a new location
     - can also be used to rename a file
     - `mv <filename> <newfilename>`
 - `mv <filename> <location + newfilename>` → to move as well as rename the file
 - `rm <filename>` → to remove a file
     - Caution ⇒ removed permanently
-- `cp -R dir1 dir2` → copy `dir1` to `dir2`
 - `rmdir` → removes an empty directory
     - `rm -R` → to remove a directory completely along with its sub-directories
+- `rm -f file` → force to remove the file
+- `cp <filename> <new filename>` → to make a copy of a file
+- `cp -R dir1 dir2` → copy `dir1` to `dir2`
 - `sudo` → super-user do (admin access command)
     - Need password for this
 - `df` → check out the free disk space
@@ -271,3 +274,13 @@
 9. `{}` → combination operator
 
 ---
+### Process Management
+
+- `ps `To display the currently working processes
+- `top` Display all running process
+- `kill pid` Kill the process with given pid
+- `killall proc` Kill all the process named proc
+- `pkill pattern` Will kill all processes matching the pattern
+- `bg `List stopped or background jobs,resume a stopped job inthe background
+- `fg `Brings the most recent job to foreground
+- `fg n` Brings job n to the foreground
