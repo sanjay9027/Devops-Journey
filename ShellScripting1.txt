@@ -1,0 +1,140 @@
+Shell Scripting
+--------------------------
+what is bash?
+Bourne Again Shell
+Bash (Bourne Again Shell) is the free and enhanced version of the Bourne shell distributed with Linux and GNU operating systems.
+
+Bash is used to automate daily /repetative tasks.
+
+------------------------------------
+exit //used to exit from sudo su /super user mode
+-------------------------------------
+ubuntu@ip-172-31-32-184:~/scripts$ which bash
+/usr/bin/bash
+------------------------------------
+note- bash files are stored in .sh format
+ubuntu@ip-172-31-32-184:~/scripts$ nano devops.sh
+//inside file
+#!/bin/bash
+
+echo " I will be a great DevOps Engineer"
+ubuntu@ip-172-31-32-184:~/scripts$ bash devops.sh
+ I will be a great DevOps Engineer
+ubuntu@ip-172-31-32-184:~/scripts$
+----------------------------------------------
+to make a file execuable file on shell then add ./ infront of that file
+ubuntu@ip-172-31-32-184:~/scripts$ ./devops.sh
+-bash: ./devops.sh: Permission denied
+ubuntu@ip-172-31-32-184:~/scripts$
+
+----------------------------------------------
+
+permissios
+-------------
+ubuntu@ip-172-31-32-184:~/scripts$ ls -l
+total 4
+-rw-rw-r-- 1 ubuntu ubuntu 55 Dec 25 15:10 devops.sh
+here -rw //read write & -r// read permissions
+ //to add execute permissions
+ ubuntu@ip-172-31-32-184:~/scripts$ chmod 777 devops.sh   //777-read write executable 
+ubuntu@ip-172-31-32-184:~/scripts$ ls -l
+total 4
+-rwxrwxrwx 1 ubuntu ubuntu 55 Dec 25 15:10 devops.sh
+ubuntu@ip-172-31-32-184:~/scripts$
+
+ ---------------------------------------
+ ubuntu@ip-172-31-32-184:~/scripts$ ./devops.sh
+ I will be a great DevOps Engineer
+ubuntu@ip-172-31-32-184:~/scripts$
+------------------------------------------
+variables
+-----------------
+on shell variables identified using symbol $ & no space should be present during variable initialiazation
+name="Sanjay" (correct)
+name= "Sanjay" (incorrect)
+
+ubuntu@ip-172-31-32-184:~/scripts$ nano devops.sh
+#!/bin/bash
+
+echo " I will be a great DevOps Engineer"
+#echo $BASH  --add # to comment any line
+name="Sanjay"
+
+echo "hello ${name}"
+
+ubuntu@ip-172-31-32-184:~/scripts$ ./devops.sh
+ I will be a great DevOps Engineer
+hello Sanjay
+ubuntu@ip-172-31-32-184:~/scripts$
+
+----------------------------------------------
+User Inputs & Arguments
+----------------------------
+ubuntu@ip-172-31-32-184:~/scripts$ nano devops.sh
+ubuntu@ip-172-31-32-184:~/scripts$ cat devops.sh
+#!/bin/bash
+
+echo " I will be a great DevOps Engineer"
+name="Sanjay"
+echo "hello ${name}"
+echo "enter your age"
+read age  //used to read data from user
+echo "My age is ${age}"
+ubuntu@ip-172-31-32-184:~/scripts$ ./devops.sh
+ I will be a great DevOps Engineer
+hello Sanjay
+enter your age
+25
+My age is 25
+ubuntu@ip-172-31-32-184:~/scripts$
+-------------------------------------------
+add sleep on scripts
+----------------------
+ubuntu@ip-172-31-32-184:~/scripts$ nano script1.sh
+ubuntu@ip-172-31-32-184:~/scripts$ cat script1.sh
+echo "hello"
+sleep 2  //pause execution for 2 seconds
+echo "it will  add pause for 2 seconds"
+ubuntu@ip-172-31-32-184:~/scripts$ chmod 777 script1.sh
+ubuntu@ip-172-31-32-184:~/scripts$ ./script1.sh
+hello
+it will  add pause for 2 seconds
+ubuntu@ip-172-31-32-184:~/scripts$
+-------------------------------------------------
+Take User Argument & run script
+----------------------------------
+$1 //represents 1st argument
+$2, $3//represent 2nd & 3rd argument respectively
+ubuntu@ip-172-31-32-184:~/scripts$ nano script1.sh
+ubuntu@ip-172-31-32-184:~/scripts$ cat script1.sh
+echo "my name is $1"
+echo "my age is $2  and place is $3"
+ubuntu@ip-172-31-32-184:~/scripts$ ./script1.sh Sanjay 25 Barbil        
+my name is Sanjay
+my age is 25  and place is Barbil
+ubuntu@ip-172-31-32-184:~/scripts$
+------------------------------------------------
+if else
+----------------------------
+ubuntu@ip-172-31-32-184:~/scripts$ nano if_test.sh
+ubuntu@ip-172-31-32-184:~/scripts$ cat if_test.sh
+#!/bin/bash
+if [ "$1" = "like" ]   //maintain spacing otherwise get some errors
+then
+ echo "Hey $1 you"
+else
+ echo "Okay, Love You"
+fi   //to close if 
+ubuntu@ip-172-31-32-184:~/scripts$ ./if_test.sh like
+Hey like you
+ubuntu@ip-172-31-32-184:~/scripts$ ./if_test.sh lol
+Okay, Love You
+ubuntu@ip-172-31-32-184:~/scripts$
+------------------------------------------------------------
+
+
+
+
+
+
+

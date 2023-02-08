@@ -1,0 +1,131 @@
+Shell Scripting-2
+--------------------------
+find greatest (else if)
+ubuntu@ip-172-31-32-184:~$ nano elif.sh
+ubuntu@ip-172-31-32-184:~$ cat elif.sh
+a=100
+b=200
+c=300
+
+if [[ $a -gt $b && $a -gt $c ]]
+
+then echo "A is greatest"
+
+elif [[ $b -gt $a && $b -gt $c ]]
+
+then echo "B is greatest"
+
+else
+ echo "C is greatest"
+fi
+ubuntu@ip-172-31-32-184:~$ ./elif.sh
+C is greatest
+ubuntu@ip-172-31-32-184:~$
+---------------------------------------------
+for loop
+-----------
+ubuntu@ip-172-31-32-184:~$ nano loops.sh
+ubuntu@ip-172-31-32-184:~$ chmod 777 loops.sh
+ubuntu@ip-172-31-32-184:~$ cat loops.sh
+for ((i=0; i<10; i++))
+do   //required in for loop
+echo "$i"
+done  // to close do or close loop
+ubuntu@ip-172-31-32-184:~$ ./loops.sh
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+ubuntu@ip-172-31-32-184:~$
+----------------------------------
+create file1.txt to file10.txt
+-------------------------------
+
+ubuntu@ip-172-31-32-184:~/dir1$ touch file1.txt
+ubuntu@ip-172-31-32-184:~/dir1$ touch file{2..10}.txt   //create file2.txt , file3.txt so on
+ubuntu@ip-172-31-32-184:~/dir1$ ls
+file1.txt   file2.txt  file4.txt  file6.txt  file8.txt
+file10.txt  file3.txt  file5.txt  file7.txt  file9.txt
+ubuntu@ip-172-31-32-184:~/dir1$
+---------------------------------------------
+iterate all files present in a directory
+-----------------------------------------
+ubuntu@ip-172-31-32-184:~$ ls
+bolo  dir1  hello  iterate_files.sh  new
+ubuntu@ip-172-31-32-184:~$
+ubuntu@ip-172-31-32-184:~$ nano iterate_files.sh
+ubuntu@ip-172-31-32-184:~$ chmod 777 iterate_files.sh
+ubuntu@ip-172-31-32-184:~$ cat iterate_files.sh
+for FILE in *  //return all files  for FILE in *.txt return only .txt files
+do
+echo $FILE
+done
+ubuntu@ip-172-31-32-184:~$ ./iterate_files.sh
+bolo
+dir1
+hello
+iterate_files.sh
+new
+ubuntu@ip-172-31-32-184:~$
+
+--------------------------------------------
+functions
+-----------------------------------------
+ubuntu@ip-172-31-32-184:~$ nano adding_user.sh
+ubuntu@ip-172-31-32-184:~$ cat adding_user.sh
+#!/bin/bash
+
+add_user()   //using function add user  
+{
+USER=$1
+PASS=$2
+useradd -m -p $PASS $USER && echo "Successfully added User"
+}
+
+#MAIN
+add_user sanjay test@123
+
+
+ubuntu@ip-172-31-32-184:~$ chmod 777 adding_user.sh
+ubuntu@ip-172-31-32-184:~$ ./adding_user.sh    //super user can add users so egetting errors
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+ubuntu@ip-172-31-32-184:~$ sudo ./adding_user.sh  //super user can able to add user
+Successfully added User
+ubuntu@ip-172-31-32-184:~$
+root@ip-172-31-32-184:/# cat etc/passwd  //to see users
+
+----------------------------------------------------------
+taking backups
+-------------------------------------
+ubuntu@ip-172-31-32-184:~/scripts$ cat backup.sh
+#!/bin/bash
+src_dir=/home/ubuntu/scripts
+
+target_dir=/home/ubuntu/backups
+
+curr_timestamp=$(date "+%Y-%m-%d-%H-%M-%S")
+backup_file=$target_dir/$curr_timestamp.tgz
+
+echo "taking backup on $curr_timestamp"
+echo "$backup_file"
+tar czf $backup_file --absolute-names  $src_dir
+echo "Backup file Complete"
+ubuntu@ip-172-31-32-184:~/scripts$ ./backup.sh
+taking backup on 2022-12-26-06-40-23
+/home/ubuntu/backups/2022-12-26-06-40-23.tgz
+Backup file Complete
+ubuntu@ip-172-31-32-184:~/scripts$ cd backups
+-bash: cd: backups: No such file or directory
+ubuntu@ip-172-31-32-184:~/scripts$ cd ..
+ubuntu@ip-172-31-32-184:~$ cd backups/
+ubuntu@ip-172-31-32-184:~/backups$ ls
+2022-12-26-06-38-31.tgz  2022-12-26-06-40-23.tgz
+
+
