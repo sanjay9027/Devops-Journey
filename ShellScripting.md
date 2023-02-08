@@ -9,7 +9,10 @@ echo $NAME
 echo "${NAME}" `
 
 ---
+### Give Permission to access file
+`chmod 777 <file_name>`
 
+---
 ### Read data from UI & Print
 
 `#!/bin/bash
@@ -22,5 +25,4 @@ echo "My age is ${AGE}"`
 `sleep 2  -> add 2 second sleep in execution`
 
 ---
-
 ###
