@@ -159,7 +159,7 @@ first argument is  Sanjay
     ```
     Output : main.txt is NOT file!  ( as file is not created )
     
-    - Example -2 :
+- Example -2 :
     
     ```
     bash
@@ -175,6 +175,7 @@ first argument is  Sanjay
     ```
     Output : file1.txt is a file!  ( as creaeted file1 first & then checked for it's existance )
     
+---
 - Case Statements (Switch)
     - Syntax:
         
@@ -194,7 +195,6 @@ first argument is  Sanjay
         		;; 
         esac
         ```
----
     - Example:
         
         ```bash
@@ -216,6 +216,7 @@ first argument is  Sanjay
             
             ![](https://i.imgur.com/Rg0YglY.png)
             
+ ---
 - Loops
     - **FOR Loop:**
         - Syntax:
