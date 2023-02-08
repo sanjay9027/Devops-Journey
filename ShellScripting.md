@@ -135,3 +135,37 @@ first argument is  Sanjay
     - `-u` : user id set on file (true)
     - `-w` : file is writable (true)
     - `-x` : file is executable (true)
+- Example:
+    
+    ```bash
+    FILE="main.txt"
+    
+    if [ -f "$FILE" ]
+    then
+        echo "${FILE} is a file!"
+    else
+        echo "${FILE} is NOT file!"
+    fi
+    ```
+    
+- Case Statements (Switch)
+    - Syntax:
+        
+        ```bash
+        case expression in 
+        	pattern1) 
+        		Statement(s) to be executed if pattern1 matches 
+        		;; 
+        	pattern2) 
+        		Statement(s) to be executed if pattern2 matches 
+        		;; 
+        	pattern3) 
+        		Statement(s) to be executed if pattern3 matches 
+        		;; 
+        	*) 
+        		Default condition to be executed 
+        		;; 
+        esac
+        ```
+---
+
