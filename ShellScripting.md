@@ -99,6 +99,16 @@ first argument is  Sanjay
             	statement
             fi
             ```
+         - Example :
+         ```
+         #!/bin/bash
+        if [ 4%2==0 ]
+        then
+             echo "even"
+        else
+             echo "odd"
+        fi
+        ```      
             
     - **IF..elif..else..fi statement**
         - Syntax:
@@ -135,7 +145,7 @@ first argument is  Sanjay
     - `-u` : user id set on file (true)
     - `-w` : file is writable (true)
     - `-x` : file is executable (true)
-- Example:
+- Example -1 :
     
     ```bash
     FILE="main.txt"
@@ -147,6 +157,23 @@ first argument is  Sanjay
         echo "${FILE} is NOT file!"
     fi
     ```
+    Output : main.txt is NOT file!  ( as file is not created )
+    
+    - Example -2 :
+    
+    ```
+    bash
+    touch file1.txt
+    FILE="file1.txt"
+    
+    if [ -f "$FILE" ]
+    then
+        echo "${FILE} is a file!"
+    else
+        echo "${FILE} is NOT file!"
+    fi
+    ```
+    Output : file1.txt is a file!  ( as creaeted file1 first & then checked for it's existance )
     
 - Case Statements (Switch)
     - Syntax:
