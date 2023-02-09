@@ -45,7 +45,9 @@
  - `docker commit [CONTAINER_ID] [new_image_name] `To create or save an image of the edited container on the local system
  - `docker tag <my-image> registry.digitalocean.com/<my-registry>/<my-image> ` To ag your image with the fully qualified destination path
  - `docker push registry.digitalocean.com/<my-registry>/<my-image>` command to upload your image to docker hub registery
- - 
+ - `docker logs container_name_or_id ` To fetch logs for any container
+ - `docker inspect image_name or container_name ` The docker inspect command is used to reveal low-level information about both containers and images
+ - `docker history `
  
  
 
