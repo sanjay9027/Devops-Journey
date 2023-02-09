@@ -26,9 +26,26 @@
 - `docker stop container-name-or-id` To stop containers that are already running
 - `docker start container-name-or-id` To start containers that have been stopped
 - `docker restart container-name-or-id` To restart the stopped container
-- `
-- 
+- `docker kill container-name-or-id` To stop the container immediately by killing its execution
+- `docker exec [OPTIONS] CONTAINER COMMAND [ARG...] ` Execute a command in a running container
+  - `docker run --name mycontainer -d -it alpine /bin/sh ` This creates and starts a container named mycontainer from an alpine image with an sh shell as its main process
 
+- `docker login` To log into your docker hub
+- `docker rename old_container_name new_container_name` To rename a container
+- `docker pause container_name ` you can suspend all processes in a specified container
+- `docker build ` is used to build image from modified Dockerfile
+  ```
+  $ vi Dockerfile
+  FROM ubuntu
+  RUN apt-get update
+  RUN apt-get install apache2
+  ```
+  `docker build -t apache-server-image ` This will build a new image named "apache-server-image" , here -t refers Tag
+  
+ - `docker commit [CONTAINER_ID] [new_image_name] `To create or save an image of the edited container on the local system
+ - `docker tag <my-image> registry.digitalocean.com/<my-registry>/<my-image> ` To ag your image with the fully qualified destination path
+ - `docker push registry.digitalocean.com/<my-registry>/<my-image>` command to upload your image to docker hub registery
+ - 
  
  
 
