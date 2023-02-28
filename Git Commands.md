@@ -13,3 +13,6 @@
 - `git add .\README.md`
 - `git commit -m "added git commands on Readme page"`
 - `git push origin bug-fixes`
+- git remote add origin https://github.com/sanjay9027/Devops-Journey.git
+- `git remote -v`
+- 
