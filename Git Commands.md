@@ -15,4 +15,6 @@
 - `git push origin bug-fixes`
 - git remote add origin https://github.com/sanjay9027/Devops-Journey.git
 - `git remote -v`
-- 
+- git branch
+- git branch <branch name>
+- git checkout  <branch name>
