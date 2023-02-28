@@ -12,7 +12,7 @@
 - git commit -m "fixes"
 - git remote -v
 - git push origin f1
-- `git add .`
+
 - `git commit -m "message"`
 - `git remote -v`
 - `git checkout master`
