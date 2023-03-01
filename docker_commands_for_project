@@ -1,3 +1,16 @@
+sudo apt update
+sudo apt install docker.io -y
+
+systemctl start docker or service docker start
+systemctl status docker or service docker status
+
+git clone https://github.com/sanjay9027/devops-master-class.git
+goto project directory
+
+FROM python:alpine3.10
+WORKDIR /app
+COPY . /app
+RUN pip install -r requirements.txt
 EXPOSE 5000
 CMD python ./launch.py
 
